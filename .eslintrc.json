@@ -4,10 +4,8 @@
 	"parserOptions": {
 		"project": "./tsconfig.eslint.json"
 	},
-	"plugins": ["local"],
+	"plugins": [],
 	"rules": {
-		"local/explicit-undefined-on-optional-properties": ["error", { "interfaceEndings": ["JSONBody"] }],
-		"local/explicitly-optional-undefined-properties": ["error", { "interfaceEndings": ["JSONBody"] }],
 		"@typescript-eslint/consistent-type-definitions": ["error", "interface"],
 		"@typescript-eslint/prefer-literal-enum-member": "off",
 		"@typescript-eslint/sort-type-union-intersection-members": "off",
