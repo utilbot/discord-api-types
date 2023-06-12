@@ -13,7 +13,7 @@ jobs:
   create_pr:
     name: Create PR for new version
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'discordjs' && github.event_name != 'push'
+    if: github.repository_owner == 'utilbot' && github.event_name != 'push'
 
     steps:
       - name: Checkout repository
@@ -65,7 +65,7 @@ jobs:
   create_release:
     name: Create release and publish
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'discordjs' && github.event_name == 'push' && startsWith(github.event.head_commit.message, 'chore(release)') && !contains(github.event.head_commit.message, '[skip ci]')
+    if: github.repository_owner == 'utilbot' && github.event_name == 'push' && startsWith(github.event.head_commit.message, 'chore(release)') && !contains(github.event.head_commit.message, '[skip ci]')
 
     steps:
       - name: Checkout repository
