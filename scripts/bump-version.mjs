@@ -39,7 +39,7 @@ execSync(`npm version ${expectedBumpType}`);
 const newVersion = JSON.parse(execSync('npm version --json', { encoding: 'utf8' }));
 
 console.info(
-	`✅ Done! discord-api-types was bumped to ${newVersion['discord-api-types']}! Checking if there was a pull request open already and closing it if so...`,
+	`✅ Done! @utilbot/discord-api-types was bumped to ${newVersion['@utilbot/discord-api-types']}! Checking if there was a pull request open already and closing it if so...`,
 );
 
 if (!process.env.GITHUB_TOKEN) {

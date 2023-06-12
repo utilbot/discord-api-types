@@ -21,7 +21,7 @@ console.log('👀 Previous release version:', previousRelease?.tag_name);
 const pullRequestBody = [
 	'**Please describe the changes this PR makes and why it should be merged:**',
 	'',
-	`This pull request bumps discord-api-types from **${previousRelease?.tag_name ?? 'unknown'}** to **${
+	`This pull request bumps @utilbot/discord-api-types from **${previousRelease?.tag_name ?? 'unknown'}** to **${
 		packageJson.version
 	}**.`,
 	'',
@@ -29,7 +29,7 @@ const pullRequestBody = [
 	'⚠️ Maintainers, make sure everything is alright in this PR before merging it. This is still a beta test, so things may break.',
 ];
 
-console.log(`🎉 Creating pull request for discord-api-types ${packageJson.version}`);
+console.log(`🎉 Creating pull request for @utilbot/discord-api-types ${packageJson.version}`);
 
 const pullRequest = await octokit.pulls.create({
 	base: 'main',

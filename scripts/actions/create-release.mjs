@@ -75,7 +75,7 @@ if (possibleNewContributors === -1) {
 	releaseChangelog.push('', data.body.slice(possibleNewContributors));
 }
 
-console.log(`🎉 Creating new release for discord-api-types ${packageJson.version}`);
+console.log(`🎉 Creating new release for @utilbot/discord-api-types ${packageJson.version}`);
 
 const release = await octokit.repos.createRelease({
 	owner: OWNER,
